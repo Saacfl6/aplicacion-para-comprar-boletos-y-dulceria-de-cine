@@ -38,7 +38,6 @@ public class OrdenDulceria {
     // Agregar producto adicional (por ejemplo, sabor o tamaño)
     public void agregarProducto(String nombre, double precio) {
         productos.add(nombre + (precio > 0 ? " ($" + precio + ")" : ""));
-        // Si agregamos un producto con precio, sumamos al total correspondiente
         if (nombre.toLowerCase().contains("palomitas")) precioPalomitas += precio;
         if (nombre.toLowerCase().contains("refresco")) precioRefrescos += precio;
         if (nombre.toLowerCase().contains("nachos")) precioNachos += precio;
@@ -93,4 +92,14 @@ public class OrdenDulceria {
         this.nachos += cantidad;
         this.precioNachos += precioUnitario * cantidad;
     }
+
+    // -------- GETTERS NECESARIOS PARA MÓDULO 4 --------
+    public String getClaveCompra() { return claveCompra; }
+    public int getPalomitas() { return palomitas; }
+    public int getRefrescos() { return refrescos; }
+    public int getNachos() { return nachos; }
+    public double getPrecioPalomitas() { return precioPalomitas; }
+    public double getPrecioRefrescos() { return precioRefrescos; }
+    public double getPrecioNachos() { return precioNachos; }
+    public ArrayList<String> getProductos() { return productos; }
 }
