@@ -94,3 +94,15 @@ public class OrdenDulceria {
         this.precioNachos += precioUnitario * cantidad;
     }
 }
+
+public String getClaveCompra() { return claveCompra; }
+public int getPalomitas() { return palomitas; }
+public int getRefrescos() { return refrescos; }
+public int getNachos() { return nachos; }
+
+public double getPrecioPalomitas() { return precioPalomitas; }
+public double getPrecioRefrescos() { return precioRefrescos; }
+public double getPrecioNachos() { return precioNachos; }
+
+public ArrayList<String> getProductos() { return productos; }
+
